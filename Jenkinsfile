@@ -16,7 +16,7 @@ pipeline {
             steps {
                 script {
                     def tfHome = tool 'Terraform'
-                    sh "${tfHome}/terraform apply -auto-approve"
+                    sh "${tfHome}/terraform remove -auto-approve"
                 }
             }
         }
