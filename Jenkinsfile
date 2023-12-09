@@ -1,5 +1,7 @@
 pipeline {
     agent any
+     environment {
+        GOOGLE_APPLICATION_CREDENTIALS = credentials('Jenkins-sa-Terraform-key')
     stages {
         stage('terraform init') {
             steps {
