@@ -12,7 +12,7 @@ pipeline {
                 }
             }
         }
-        stage('terraform apply') {
+        stage('terraform destroy') {
             steps {
                 script {
                     def tfHome = tool 'Terraform'
