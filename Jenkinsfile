@@ -12,6 +12,14 @@ pipeline {
                 }
             }
         }
+        stage('terraform apply') {
+            steps {
+                script {
+                    def tfHome = tool 'Terraform'
+                    sh "${tfHome}/terraform apply -auto-approve"
+                }
+            }
+        }
         stage('terraform destroy') {
             steps {
                 script {
