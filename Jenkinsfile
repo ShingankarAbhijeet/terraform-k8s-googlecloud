@@ -1,7 +1,7 @@
 pipeline {
     agent any
     stages {
-        stage{"terraform init"} {
+        stage{'terraform init'} {
             steps {
                 script {
                 def tfHome = tool 'Terraform'
@@ -12,7 +12,7 @@ pipeline {
         stage{'terraform apply'} {
             steps {
                 script {
-                    def tfHome = tool 'terraform'
+                    def tfHome = tool 'Terraform'
                     sh "${tfHome}/terraform apply -auto-approve"
                 }
             }
