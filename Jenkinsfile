@@ -1,7 +1,7 @@
 pipeline {
     agent any
     stages {
-        stage{'terraform init'} {
+        stage('terraform init') {
             steps {
                 script {
                 def tfHome = tool 'Terraform'
@@ -9,7 +9,7 @@ pipeline {
                 }
             }
         }
-        stage{'terraform apply'} {
+        stage('terraform apply') {
             steps {
                 script {
                     def tfHome = tool 'Terraform'
